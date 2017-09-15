@@ -15,9 +15,9 @@ fs.appendFile('server-log',log + '\n', (err)=>{
 });
 next();
 });
-app.use((req,res,next)=>{
-  res.render('magnet.hbs');
-});
+// app.use((req,res,next)=>{
+//   res.render('magnet.hbs');
+// });
 app.use(express.static(__dirname + '/public'));
 hbs.registerPartials(__dirname+'/views/partials');
 hbs.registerHelper('getCurrentYear',() => {
