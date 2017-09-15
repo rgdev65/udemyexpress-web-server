@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 var app=express();
+const port = process.env.PORT || 3000; //to provide server port dynamicaaly by HEROKU.
 
 app.set('view engine','hbs');
 
@@ -45,6 +46,6 @@ app.get('/bad',(req,res) =>{
   });
 });
 
-app.listen(3000,()=>{
-  console.log('We are live on port:3000');
+app.listen(port,()=>{
+  console.log(`We are live on port:${port}`);
 });
